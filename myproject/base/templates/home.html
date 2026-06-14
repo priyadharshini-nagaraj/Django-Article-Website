@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block content %}
+
+        {% for i in data %}
+        <div class="box">
+        <h2 class="home-title">{{i.title}}</h2><br>
+        <h3 class="home-description">{{i.description|truncatewords:5}}</h3><br>
+        <a href="{% url 'read' i.id %}">Read more</a>
+        </div>
+        {% endfor %}
+
+{% endblock %}

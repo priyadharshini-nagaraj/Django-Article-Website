@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block content %}
+    <h1>Blogs Page</h1>
+    <div class="blog">
+        <img src="{% static 'Taj Mahal.jpg' %}" alt="Taj Mahal">
+        <h3>India is Known for its beautiful Taj Mahal</h3>
+    </div>
+    
+{% endblock %}
